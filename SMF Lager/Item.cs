@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SMF_Lager
 {
-    class Item
+     public class Item
     {
 
         private string name;
@@ -14,20 +14,20 @@ namespace SMF_Lager
         private double price;
         public string Name
         {
-            get;
-            set;
+            get { return name; }
+            set { name = value; }
         }
 
         public int Quantity
         {
-            get;
-            set;
+            get { return quantity; }
+            set { quantity = value; }
         }
 
         public double Price
         {
-            get;
-            set;
+            get { return price; }
+            set { price = value; }
         }
 
         public Item(string name, int quantity, double price)
@@ -52,7 +52,7 @@ namespace SMF_Lager
         
         public override string ToString()
         {
-            string stringCollector = name + " " + quantity + " " + price;
+            string stringCollector = "Varenavn: " + name + " Antal: " + quantity + " Pris: " + price;
             return stringCollector;
         }
     }

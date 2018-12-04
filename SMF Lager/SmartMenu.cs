@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SMF_Lager
 {
-    public class Binding
+    public class SmartMenu
     {
-        public void SwitchCase(int userInput, ItemsRepo iR)
+        public void ShowMenu()
         {
 
         }

@@ -8,10 +8,10 @@ namespace SMF_Lager
 {
     class Program
     {
-        public void ShowMenu();
         static void Main(string[] args)
         {
-            
+            ItemsRepo m = new ItemsRepo();
+            m.GetItemList();
         }
     }
 }
