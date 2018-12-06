@@ -12,15 +12,27 @@ namespace SMF_Lager
         
             public void SetUpItems()
             {
-                items = new List<Item>
+            items = new List<Item>
                     {
                         new Item("hvid", 1, 2.5),
                         new Item("sort", 3, 5.0),
+                        
                     };
             }
             public string ShowItem(string name)
             {
-            return name;
+            SetUpItems();
+                foreach(Item item in items)
+                {
+                    if (item.Name == name)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    
+                }
+
+            return "fejl";
+            
             }
             public void GetItemList()
             {
@@ -32,11 +44,12 @@ namespace SMF_Lager
             }
             public void RegisterNewItem(string name, int quantity, double price)
             {
-
+            Item vare = new Item(name, quantity, price);
+            AddItem(vare);
             }
             public void AddItem(Item item)
             {
-
+            items.Add(item);
             }
             public void UpdateQuantity(string name, int quantity)
             {

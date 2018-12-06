@@ -10,8 +10,8 @@ namespace SMF_Lager
     {
         static void Main(string[] args)
         {
-            ItemsRepo m = new ItemsRepo();
-            m.GetItemList();
+            SmartMenu m = new SmartMenu();
+            m.ShowMenu();
         }
     }
 }
