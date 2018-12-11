@@ -53,11 +53,23 @@ namespace SMF_Lager
             }
             public void UpdateQuantity(string name, int quantity)
             {
-
+                foreach(Item i in items)
+                {
+                    if(i.Name == name)
+                    {
+                    i.Quantity = quantity;
+                    }
+                }
             }
             public void UpdatePrice(string name, double price)
             {
-
+                foreach(Item i in items)
+                {
+                    if(i.Name == name)
+                    {
+                    i.Price = price;
+                    }
+                }
             }
             public void Save()
             {

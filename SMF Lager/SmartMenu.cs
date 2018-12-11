@@ -13,6 +13,8 @@ namespace SMF_Lager
             Console.WriteLine("1. Vis vare og information");
             Console.WriteLine("2. Bamsefarfar");
             Console.WriteLine("3. Bamsefarfarfar");
+            Console.WriteLine("4. Opdatere antal");
+            Console.WriteLine("5. Opdatere pris");
 
             ItemsRepo r = new ItemsRepo();
             string name;
@@ -40,6 +42,22 @@ namespace SMF_Lager
                     Console.WriteLine("Registrer ny vare pris");
                     price = double.Parse(Console.ReadLine());
                     r.RegisterNewItem(name, quantity, price);
+                    break;
+
+                case "4":
+                    Console.WriteLine("Indtast produkts navn: ");
+                    name = Console.ReadLine();
+                    Console.WriteLine("Opdater antal: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    r.UpdateQuantity(name, quantity);
+                    break;
+
+                case "5":
+                    Console.WriteLine("Indtast produkts navn: ");
+                    name = Console.ReadLine();
+                    Console.WriteLine("Opdatere pris: ");
+                    price = double.Parse(Console.ReadLine());
+                    r.UpdatePrice(name, price);
                     break;
 
                 default:
