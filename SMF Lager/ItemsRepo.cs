@@ -28,7 +28,6 @@ namespace SMF_Lager
                     {
                         Console.WriteLine(item);
                     }
-                    
                 }
 
             return "fejl";
@@ -71,6 +70,17 @@ namespace SMF_Lager
                     }
                 }
             }
+        public Item GetItem(string name)
+        {
+            foreach (Item i in items)
+            {
+                if(i.Name == name)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
             public void Save()
             {
 

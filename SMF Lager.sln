@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMF Lager", "SMF Lager\SMF Lager.csproj", "{F85461F7-DC43-4637-B30A-CA51CE2E6315}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMF Salg", "SMF Salg\SMF Salg.csproj", "{291ED6B3-C517-4AA7-BD1C-D56932CA67B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F85461F7-DC43-4637-B30A-CA51CE2E6315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F85461F7-DC43-4637-B30A-CA51CE2E6315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F85461F7-DC43-4637-B30A-CA51CE2E6315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291ED6B3-C517-4AA7-BD1C-D56932CA67B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291ED6B3-C517-4AA7-BD1C-D56932CA67B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291ED6B3-C517-4AA7-BD1C-D56932CA67B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291ED6B3-C517-4AA7-BD1C-D56932CA67B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
