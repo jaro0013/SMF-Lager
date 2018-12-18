@@ -11,10 +11,11 @@ namespace SMF_Lager
         public void ShowMenu()
         {
             Console.WriteLine("1. Vis vare og information");
-            Console.WriteLine("2. Bamsefarfar");
-            Console.WriteLine("3. Bamsefarfarfar");
+            Console.WriteLine("2. Vis produkt");
+            Console.WriteLine("3. Registrer ny varer");
             Console.WriteLine("4. Opdatere antal");
             Console.WriteLine("5. Opdatere pris");
+            Console.WriteLine("6. Bestil vare");
 
             ItemsRepo r = new ItemsRepo();
             string name;
@@ -59,6 +60,16 @@ namespace SMF_Lager
                     price = double.Parse(Console.ReadLine());
                     r.UpdatePrice(name, price);
                     break;
+
+                case "6":
+                    Console.WriteLine("Indtast produkts navn: ");
+                    name = Console.ReadLine();
+                    Console.WriteLine("Vælg antal: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    
+                    break;
+
+
 
                 default:
                     break;
