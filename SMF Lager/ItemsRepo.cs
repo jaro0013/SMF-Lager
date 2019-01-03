@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -83,11 +84,27 @@ namespace SMF_Lager
         }
             public void Save()
             {
+                using (var StreamWriter = new StreamWriter("save.txt"))
+                {
+                    foreach(Item item in items)
+                    {
+                        StreamWriter.WriteLine("Maling;"+ item.Name + ";Quantity;" + item.Quantity + ";Price;" + item.Price);
+                    }
+                
+                }
 
             }
             public void Load()
             {
+                StreamReader load = new StreamReader("save.txt");
+                while (load.EndOfStream == false)
+                {
+                string line = load.ReadLine();
+                String[] Load = line.Split(';');
+                Item item = new Item(Load[1], int.Parse(Load[3]), double.Parse(Load[5]));
+                }
 
+            load.Close();   
             }
     }
 }
